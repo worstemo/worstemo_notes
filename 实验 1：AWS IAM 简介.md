@@ -288,7 +288,7 @@ AWS Identity and Access Management (IAM) 可用于：
     - 在屏幕顶部，选择 **user-1**
     - 选择 **Sign out**（退出）
     
-    ![屏幕截图](https://s3-us-west-2.amazonaws.com/us-west-2-aws-training/awsu-spl/spl-66/images/user-1-sign-out.png)
+    ![](assets/实验%201：AWS%20IAM%20简介/file-20251125094051149.png)
     
 41. 将 **IAM 用户登录**链接粘贴到隐私浏览器标签页的地址栏中，然后按 **Enter** 键。
     
@@ -331,7 +331,7 @@ AWS Identity and Access Management (IAM) 可用于：
     - 在屏幕顶部，选择 **user-2**
     - 选择 **Sign out**（退出）
     
-    ![屏幕截图](https://s3-us-west-2.amazonaws.com/us-west-2-aws-training/awsu-spl/spl-66/images/user-2-sign-out.png)
+    ![](assets/实验%201：AWS%20IAM%20简介/file-20251125094107582.png)
     
 50. 将 **IAM 用户登录**链接粘贴到隐私窗口中，然后按 **Enter** 键。
     
