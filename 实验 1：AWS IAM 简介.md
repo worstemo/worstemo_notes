@@ -4,7 +4,7 @@
 
 本实验将演示：
 
-![实验概览](https://labs.vocareum.com/web/4516851/4615937.0/ASNLIB/public/docs/lang/zh-cn/images/lab-scenario.jpeg)
+![](assets/实验%201：AWS%20IAM%20简介/file-20251125093945414.png)
 
 - 了解预创建的 **IAM 用户和组**
 - 检查在预创建的组上应用的 **IAM 策略**
