@@ -23,11 +23,13 @@ in  属于
 ```
 例：
 ```python
-v1 = 0 and 12  # v1 = 0
-v2 = 1 and 99  # v2 = 99
-v3 = '' or 18  # v3 = 18
-v4 = 'hello'
+v1 = 0 and 12       # v1 = 0
+v2 = '1' and 99     # v2 = 99
+v3 = '' or 18       # v3 = 18
+v4 = 'hello' or ''  # v4 = 'hello'
 ```
+
+
 ### 整型 int
 
 
