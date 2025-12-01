@@ -46,22 +46,22 @@
 	1. 列表尾部添加元素：append()
 	2. 特定索引前添加元素：insert()
 	3. 删除第一个匹配到的元素：remove()
-	删除特定索引的元素（不写默认为尾部元素）：
+	4. 删除特定索引的元素（不写默认为尾部元素）：
 		pop()
 		关键字：del
-	清除列表元素：clear()
-	对列表元素进行排序：sort()
+	5. 清除列表元素：clear()
+	6. 对列表元素进行排序：sort()
 		默认从小到大
 		若 reverse = True，则从大到小
 ```
 
 ```
 公共功能：
-	长度：len()
-	索引：list[index]
-	切片：list[start:end+1:step]
-	for循环遍历列表中的每个元素
-	嵌套
+	1. 长度：len()
+	2. 索引：list[index]
+	3. 切片：list[start:end+1:step]
+	4. for循环遍历列表中的每个元素
+	5. 嵌套
 ```
 
 ### 元组 tuple
@@ -81,11 +81,11 @@
 
 ```
 公共功能：
-	长度：len()
-	索引：tuple[index]
-	切片：tuple[start:end+1:step]
-	for循环遍历元组中的每个元素
-	嵌套
+	1. 长度：len()
+	2. 索引：tuple[index]
+	3. 切片：tuple[start:end+1:step]
+	4. for循环遍历元组中的每个元素
+	5. 嵌套
 ```
 
 >**元组中只有1个元素时，该元素后要添加','**
