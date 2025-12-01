@@ -51,7 +51,7 @@
 	清除列表元素：clear()
 	对列表元素进行排序：sort()
 		默认从小到大
-		若 reserved = True，则从大到小
+		若 reverse = True，则从大到小
 ```
 
 ```
