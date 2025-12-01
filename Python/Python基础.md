@@ -56,6 +56,7 @@
 	索引：list[index]
 	切片：list[start:end+1:step]
 	for循环遍历列表中的每个元素
+	嵌套
 ```
 
 ### 元组 tuple
@@ -75,6 +76,7 @@
 	索引：list[index]
 	切片：list[start:end+1:step]
 	for循环遍历元组中的每个元素
+	嵌套
 ```
 
 >元组中只有1个元素时，该元素后要添加','
