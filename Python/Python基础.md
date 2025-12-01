@@ -33,6 +33,7 @@
 	长度：len()
 	索引：str[index]
 	切片：str[start:end+1:step]
+	for循环遍历字符串中的每个字符
 ```
 
 ### 列表 list
@@ -60,8 +61,9 @@
 ```
 公共功能：
 	长度：len()
-	索引：str[index]
-	切片：str[start:end+1:step]
+	索引：list[index]
+	切片：list[start:end+1:step]
+	for循环遍历列表中的每个元素
 ```
 
 ### 元组 tuple
