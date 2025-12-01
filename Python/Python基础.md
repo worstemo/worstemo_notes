@@ -2,12 +2,14 @@
 
 ### 布尔值 bool —— False 假、True 真
 
-```
+```python
 bool():
 字符串 => 布尔：
 	1. 空字符串 => False
 	2. 非空字符串 => True
 整型 => 布尔
+	3. 0 => False
+	4. 非0 => True
 ```
 
 ### 整型 int
@@ -15,7 +17,7 @@ bool():
 
 ### 字符串 str —— 不可变
 
-```
+```python
 独有功能：
 	1. 大小写：upper()、lower()
 	2. 是否为数字：isdecimal()
