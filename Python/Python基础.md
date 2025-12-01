@@ -12,18 +12,17 @@ bool():
 	4. 非0 => True
 ```
 
+
 ```python
-and 与
+and 与   
 or  或
 not 非
 in  属于
-#
+```
 
 ### 整型 int
 
-```pyhon
 
-```
 
 ### 字符串 str —— 不可变
 
