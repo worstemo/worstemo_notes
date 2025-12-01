@@ -3,9 +3,9 @@
 ### 布尔值 bool
 
 ```
+False 假
 True 真
-
-False 
+	bool('0')
 ```
 
 ### 整型 int
@@ -13,7 +13,7 @@ False
 
 ### 字符串 str —— 不可变
 
-```
+```python
 独有功能：
 	1. 大小写：upper()、lower()
 	2. 是否为数字：isdecimal()
