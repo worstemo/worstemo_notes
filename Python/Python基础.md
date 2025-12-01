@@ -11,7 +11,12 @@ bool():
 	3. 0 => False
 	4. 非0 => True
 ```
-
+```python
+and 与
+or  或
+not 非
+in  
+```
 ### 整型 int
 
 ```pyhon
