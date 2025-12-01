@@ -13,6 +13,7 @@
 	大小写：upper()、lower()
 	是否为数字：isdecimal()
 	是否以特定字符串为开头或结尾：startswith()、endswith()
+	替换指定字符串：replace()
 	去除字符串左右的特定字符（默认为空格）：
 		strip()   左右都去除
 		lstrip()  去除左边特定字符
@@ -81,13 +82,13 @@
 ```
 公共功能：
 	长度：len()
-	索引：list[index]
-	切片：list[start:end+1:step]
+	索引：tuple[index]
+	切片：tuple[start:end+1:step]
 	for循环遍历元组中的每个元素
 	嵌套
 ```
 
->元组中只有1个元素时，该元素后要添加','
+>**元组中只有1个元素时，该元素后要添加','**
 >
 >v1 = (1,)    v1是元组
 >
