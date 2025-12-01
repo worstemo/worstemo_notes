@@ -6,7 +6,7 @@
 ### 字符串 str —— 不可变
 
 ```
-私有方法：
+独有功能：
 	大小写：upper()、lower()
 	是否为数字：isdecimal()
 	是否以特定字符串为开头或结尾：startswith()、endswith()
@@ -27,7 +27,7 @@
 ```
 
 ```
-公有方法：
+公共功能：
 	长度：len()
 	索引：str[index]
 	切片：str[start:end+1:step]
