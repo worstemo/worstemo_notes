@@ -21,7 +21,11 @@ or  或
 not 非
 in  属于
 ```
-
+例：
+```python
+v1 = 0 and 12  # v1 = 0
+v2 = 1 and 99  #
+```
 ### 整型 int
 
 
