@@ -11,10 +11,10 @@ bool():
 	3. 0 => False
 	4. 非0 => True
 ```
-
+>True 和任何值and
 
 ```python
-and 与   
+and 与
 or  或
 not 非
 in  属于
