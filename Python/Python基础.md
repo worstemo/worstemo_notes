@@ -167,6 +167,19 @@ v2 = (1)     # v2 = 1
 >	
 >	不可哈希：list、dict
 
+```python
+独有功能：
+	
+```
+
+```python
+公共功能：
+	1. 长度：len()
+	2. 索引：tuple[index]
+	3. 切片：tuple[start:end+1:step]
+	4. for循环遍历元组中的每个元素
+	5. 嵌套
+```
 
 
 ### 集合 set
