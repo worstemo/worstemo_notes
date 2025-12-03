@@ -348,10 +348,12 @@ while True:
   
     user_info = '{},{}\n'.format(name,password)  
   
-    # 暂时写入计算机内存中（缓冲区）  
+    # 暂时将数据写入计算机内存中（缓冲区），文件关闭后再一次性移动到硬盘（文件）中  
     file_object.write( user_info.encode('utf-8') )  
   
-# 文件关闭后再一次性移动到硬盘中  
+    # 实时写入：强制将内存（缓冲区）中的数据写入硬盘（文件）中  
+    file_object.flush()  
+  
 file_object.close()
 ```
 
