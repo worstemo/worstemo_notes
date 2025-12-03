@@ -65,7 +65,11 @@ hex()
 # 精确的浮点数运算，可以使用 decimal模块
 import decimal
 
-v1 - 
+v1 = decimal.Decimal('0.1')
+v2 = decimal.Decimal('0.2')
+
+v3 = v1 + v2
+print(v3) # 0.3
 ```
 
 ### 字节类型
