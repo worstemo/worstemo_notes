@@ -366,8 +366,8 @@ file_object.close()
 ```python
 # 1. 打开文件  
 # text.txt 文件路径  
-# mode = 'ab' 以写模式打开文件：文件不存在，则创建文件；文件存在，则清空文件
-	# a - 写
+# mode = 'ab' 以写模式打开文件：文件不存在，则创建文件；文件存在，则在文件尾部追加写入
+	# a - 追加写入
 	# b - 字节类型
 file_object = open('hello.txt',mode = 'wb')  
   
