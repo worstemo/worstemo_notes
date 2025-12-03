@@ -321,10 +321,54 @@ v2 = (1)     # v2 = 1
 
 ### 写文件
 
+**覆盖写入**
+
 ```python
 # 1. 打开文件  
 # text.txt 文件路径  
 # mode = 'wb' 以写模式打开文件：文件不存在，则创建文件；文件存在，则清空文件
+	# w - 写
+	# b - 字节类型
+file_object = open('hello.txt',mode = 'wb')  
+  
+# 2. 写入内容  
+hello = 'hello world'  
+file_object.write( hello.encode('utf-8') )  
+  
+# 3. 关闭文件  
+file_object.close()
+```
+
+练习题：用户注册，每注册一个用户就在文件中写入一行"用户名,密码"（循环操作，Q/q终止）
+
+```python
+file_object = open('user_info.txt',mode = 'wb')  
+  
+while True:  
+    name = input('请输入用户名：')  
+    if name.upper() == 'Q':  
+        break  
+    password = input('请输入密码：')  
+  
+    user_info = '{},{}\n'.format(name,password)  
+  
+    # 暂时将数据写入计算机内存中（缓冲区），文件关闭后再一次性移动到硬盘（文件）中  
+    file_object.write( user_info.encode('utf-8') )  
+  
+    # 实时写入：强制将内存（缓冲区）中的数据写入硬盘（文件）中  
+    file_object.flush()  
+  
+file_object.close()
+```
+
+**追加写入**
+
+```python
+# 1. 打开文件  
+# text.txt 文件路径  
+# mode = 'ab' 以写模式打开文件：文件不存在，则创建文件；文件存在，则清空文件
+	# a - 写
+	# b - 字节类型
 file_object = open('hello.txt',mode = 'wb')  
   
 # 2. 写入内容  
