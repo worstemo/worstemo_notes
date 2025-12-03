@@ -84,9 +84,8 @@ print(v3) # 0.3
 
 字符串编码
 ```python
-ASCII
-unicode
-UTF-8
+unicode  # 字符串底层采用 unicode 编码
+u-8
 ```
 
 ```python
