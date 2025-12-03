@@ -6,7 +6,7 @@
 
 ```python
 bool():
-0、""、[]、()、{}、set() => False
+0、""、[]、()、{}、set()、None => False
 其他 => True
 ```
 
