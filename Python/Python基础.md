@@ -75,11 +75,13 @@ print(v3) # 0.3
 
 ### 字节类型 bytes
 
-```python
-name = ""                      # 字符串类型 str，底层采用 unicode 编码
-data = name.encode('utf-8')    # 字节类型 bytes，底层采用 utf-8 编码
+>UTF-8中一个中文占
 
-print(data)
+```python
+name = "酱油瓶"                 # 字符串类型 str，底层采用 unicode 编码  
+data = name.encode('utf-8')    # 字节类型 bytes，底层采用 utf-8 编码  
+  
+print(data) # b'\xe9\x85\xb1\xe6\xb2\xb9\xe7\x93\xb6'
 ```
 
 
