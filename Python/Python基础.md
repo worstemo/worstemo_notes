@@ -242,7 +242,14 @@ v2 = (1)     # v2 = 1
 ```python
 独有功能：
 	1. 添加元素：add()
-	2. 
+	2. 删除元素：discard()   # 若元素不存在，不会报错
+	3. 交集：
+		   方法1：set1.intersection(set2)  # 生成新的集合
+		   方法2：set1 & set2
+	4. 并集：
+		   方法1：set1.union(set2)
+		   方法2：set1 | set2
+	5. 差集
 ```
 
 ```python
