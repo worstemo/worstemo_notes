@@ -75,13 +75,20 @@ print(v3) # 0.3
 
 ### 字节类型 bytes
 
->**注意：UTF-8 中一个中文占3个字节**
+>**注意：UTF-8 中一个中文占3个字节，GBK 中一个中文占2个字节**
 
 ```python
-name = "酱油瓶"                 # 字符串类型 str，底层采用 unicode 编码  
-data = name.encode('utf-8')    # 字节类型 bytes，底层采用 utf-8 编码  
+字符串 => 字节 ：encode()
+字节 => 字符串：decode()
+```
+
+```python
+name = "酱油瓶"  # 字符串类型 str，底层采用 unicode 编码  
+data1 = name.encode('utf-8')  # 字节类型 bytes，底层采用 utf-8 编码  
+data2 = name.encode('gbk')  # 字节类型 bytes，底层采用 gbk 编码  
   
-print(data) # b'\xe9\x85\xb1\xe6\xb2\xb9\xe7\x93\xb6'
+print(data1)  # b'\xe9\x85\xb1\xe6\xb2\xb9\xe7\x93\xb6'  
+print(data2)  # b'\xbd\xb4\xd3\xcd\xc6\xbf'
 ```
 
 
