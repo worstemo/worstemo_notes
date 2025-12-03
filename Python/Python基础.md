@@ -76,11 +76,8 @@ print(v3) # 0.3
 ### 字节类型 bytes
 
 ```python
-```python
-unicode  # 字符串类型 str，底层采用 unicode 编码
-utf-8    # 字节类型 bytes，底层采用 utf-8 编码
-```
-
+name = ""  # 字符串类型 str，底层采用 unicode 编码
+data = name.encode('utf-8')    # 字节类型 bytes，底层采用 utf-8 编码
 ```
 
 
