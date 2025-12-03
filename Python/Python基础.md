@@ -319,3 +319,18 @@ v2 = (1)     # v2 = 1
 >	
 >	**3. 关闭文件**
 
+
+
+```python
+# 1. 打开文件  
+# text.txt 文件路径  
+# mode = 'wb' 以写模式打开文件  
+file_object = open('hello.txt',mode = 'wb')  
+  
+# 2. 写入内容  
+hello = 'hello world'  
+file_object.write( hello.encode('utf-8') )  
+  
+# 3. 关闭文件  
+file_object.close()
+```
