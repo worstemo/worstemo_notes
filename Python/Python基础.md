@@ -335,4 +335,21 @@ file_object.write( hello.encode('utf-8') )
 file_object.close()
 ```
 
+练习题：用户注册，每注册一个用户就在文件中写入一行"用户名,密码"（循环操作，Q/q终止）
+
+```python
+file_object = open('user_info.txt',mode = 'wb')  
+  
+while True:  
+    name = input('请输入用户名：')  
+    password = input('请输入密码：')  
+  
+    if name.upper() == 'Q':  
+        break  
+  
+    user_info = '{},{}\n'.format(name,password)  
+    file_object.write( user_info.encode('utf-8') )  
+  
+file_object.close()
+```
 
