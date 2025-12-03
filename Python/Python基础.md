@@ -319,12 +319,12 @@ v2 = (1)     # v2 = 1
 >	
 >	**3. 关闭文件**
 
-
+### 写文件
 
 ```python
 # 1. 打开文件  
 # text.txt 文件路径  
-# mode = 'wb' 以写模式打开文件  
+# mode = 'wb' 以写模式打开文件：文件不存在，则创建文件；文件存在，则清空文件
 file_object = open('hello.txt',mode = 'wb')  
   
 # 2. 写入内容  
@@ -334,3 +334,5 @@ file_object.write( hello.encode('utf-8') )
 # 3. 关闭文件  
 file_object.close()
 ```
+
+
