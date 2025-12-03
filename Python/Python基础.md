@@ -249,7 +249,9 @@ v2 = (1)     # v2 = 1
 	4. 并集：
 		   方法1：set1.union(set2)
 		   方法2：set1 | set2
-	5. 差集
+	5. 差集：
+		   方法1：set1.difference(set2)  # set1中有的，但set2中没有的元素
+		   方法2：set1 - set2            # set1中有的，但set2中没有的元素
 ```
 
 ```python
