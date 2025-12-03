@@ -75,7 +75,7 @@ print(v3) # 0.3
 
 ### 字节类型 bytes
 
->UTF-8中一个中文占
+>**注意：UTF-8 中一个中文占3个字节**
 
 ```python
 name = "酱油瓶"                 # 字符串类型 str，底层采用 unicode 编码  
