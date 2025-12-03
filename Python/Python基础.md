@@ -407,14 +407,17 @@ file_object.close()
 ```python
 # 1. 打开文件  
 # hello.txt 文件路径  
-# mode = 'rb' 以读模式打开文件
-	# r - 读
-	# b - 字节类型
-file_object = open('hello.txt',mode = 'wb')  
+# mode = 'rb' 以读模式打开文件  
+	# r - 读  
+	# b - 字节类型  
+file_object = open('hello.txt', mode='rb')  
   
 # 2. 读取文件的所有内容  
 content = file_object.read()  
-content_string =  content.decode('utf-8') 
+print(content) # b'hello world' - 字节类型  
+  
+content_string = content.decode('utf-8')  
+print(content_string) # hello world - 字符串类型  
   
 # 3. 关闭文件  
 file_object.close()
