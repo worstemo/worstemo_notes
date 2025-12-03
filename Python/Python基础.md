@@ -382,7 +382,7 @@ file_object.close()
 练习题：用户注册，每注册一个用户就在文件中写入一行"用户名,密码"（循环操作，Q/q终止）
 
 ```python
-file_object = open('user_info.txt',mode = 'wb')  
+file_object = open('user_info.txt',mode = 'ab')  
   
 while True:  
     name = input('请输入用户名：')  
@@ -401,3 +401,5 @@ while True:
 file_object.close()
 ```
 
+
+### 读文件
