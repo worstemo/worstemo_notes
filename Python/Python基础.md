@@ -325,7 +325,7 @@ v2 = (1)     # v2 = 1
 
 ```python
 # 1. 打开文件  
-# text.txt 文件路径  
+# hello.txt 文件路径  
 # mode = 'wb' 以写模式打开文件：文件不存在，则创建文件；文件存在，则清空文件（覆盖写入）
 	# w - 写
 	# b - 字节类型
@@ -365,7 +365,7 @@ file_object.close()
 
 ```python
 # 1. 打开文件  
-# text.txt 文件路径  
+# hello.txt 文件路径  
 # mode = 'ab' 以写模式打开文件：文件不存在，则创建文件；文件存在，则在文件尾部追加写入
 	# a - 追加写入
 	# b - 字节类型
@@ -404,3 +404,18 @@ file_object.close()
 
 ### 读文件
 
+```python
+# 1. 打开文件  
+# hello.txt 文件路径  
+# mode = 'rb' 以读模式打开文件
+	# r - 读
+	# b - 字节类型
+file_object = open('hello.txt',mode = 'wb')  
+  
+# 2. 读取文件的所有内容  
+content = file_object.read()  
+content_string =  content.decode('utf-8') 
+  
+# 3. 关闭文件  
+file_object.close()
+```
