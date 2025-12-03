@@ -342,14 +342,16 @@ file_object = open('user_info.txt',mode = 'wb')
   
 while True:  
     name = input('请输入用户名：')  
-    password = input('请输入密码：')  
-  
     if name.upper() == 'Q':  
         break  
+    password = input('请输入密码：')  
   
     user_info = '{},{}\n'.format(name,password)  
+  
+    # 暂时写入计算机内存中（缓冲区）  
     file_object.write( user_info.encode('utf-8') )  
   
+# 文件关闭后再一次性移动到硬盘中  
 file_object.close()
 ```
 
