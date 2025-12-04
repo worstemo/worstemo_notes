@@ -499,6 +499,7 @@ for line in file_object:
     if line_string:  # '\n' => ''，若为空行，什么也不做；不为空行，输出本行中的单词
         word = line_string.split(',')[1]  
         print(word)  
-  
+
+# 关闭文件
 file_object.close()
 ```
