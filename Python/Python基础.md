@@ -581,4 +581,48 @@ print('结束')
 
 ### 文件打开模式
 
->
+- `wb`，写
+
+```python
+file_object = open('hello.txt',mode = 'wb')  
+
+file_object.write( '你好'.encode('utf-8') )  
+
+file_object.close()
+```
+
+- `w`，写
+
+>**注意：需要设置 `encoding` 参数，会实现自动 `encode` 压缩编码**
+
+```python
+file_object = open('hello.txt',mode = 'w',encoding = 'utf-8')  
+
+file_object.write( '你好' )  
+
+file_object.close()
+```
+
+- `ab`，追加
+
+```python
+file_object = open('hello.txt',mode = 'ab')  
+
+file_object.write( '你好'.encode('utf-8') )  
+
+file_object.close()
+```
+
+- `a`，追加
+
+>**注意：需要设置 `encoding` 参数，会实现自动 `encode` 压缩编码**
+
+```python
+file_object = open('hello.txt',mode = 'a',encoding = 'utf-8')  
+
+file_object.write( '你好' )  
+
+file_object.close()
+```
+
+- `rb`，读
