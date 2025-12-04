@@ -412,7 +412,7 @@ file_object.close()
 # mode = 'rb' 以读模式打开文件  
 	# r - 读  
 	# b - 字节类型  
-file_object = open('hello.txt', mode='rb')  
+file_object = open('hello.txt', mode = 'rb')  
   
 # 2. 读取文件的所有内容  
 content = file_object.read()  
