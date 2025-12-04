@@ -406,6 +406,8 @@ file_object.close()
 
 ### 读文件
 
+**读取文件全部内容**
+
 ```python
 # 1. 打开文件  
 # hello.txt 文件路径  
@@ -424,4 +426,10 @@ print(content_string) # hello world - 字符串类型
   
 # 3. 关闭文件  
 file_object.close()
+```
+
+**逐行读取**
+
+```python
+
 ```
