@@ -490,7 +490,7 @@ s,seek,12222,2
 ```
 
 ```python
-# 写模式打开文件
+# 读模式打开文件
 file_object = open('data.txt',mode = 'rb')  
 
 # 逐行遍历
