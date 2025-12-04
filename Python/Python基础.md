@@ -321,7 +321,7 @@ v2 = (1)     # v2 = 1
 
 ### 写文件
 
-**1. 覆盖写入**
+#####  1. 覆盖写入
 
 ```python
 # 1. 打开文件  
@@ -362,7 +362,7 @@ while True:
 file_object.close()
 ```
 
-**2. 追加写入**
+##### 2. 追加写入
 
 ```python
 # 1. 打开文件  
@@ -406,7 +406,7 @@ file_object.close()
 
 ### 读文件
 
-**读取文件全部内容**
+##### 1. 读取文件全部内容
 
 ```python
 # 1. 打开文件  
@@ -428,7 +428,37 @@ print(content_string) # hello world - 字符串类型
 file_object.close()
 ```
 
-**逐行读取**
+##### 2. 逐行读取
+
+>读取大文件时，可以逐行读取
+
+**方法1：使用 `readline()`**
+
+```python
+# 1. 打开文件  
+# hello.txt 文件路径  
+# mode = 'rb' 以读模式打开文件  
+    # r - 读  
+    # b - 字节类型  
+file_object = open('hello.txt', mode = 'rb')  
+  
+# 2. 逐行读取文件内容  
+# 读取文件第一行  
+line1 = file_object.readline()  
+print(line1.decode('utf-8').strip())  
+# 读取文件第二行  
+line2 = file_object.readline()  
+print(line2.decode('utf-8').strip())  
+# 读取文件第三行  
+line3 = file_object.readline()  
+print(line3.decode('utf-8').strip())  
+# ... ...  
+  
+# 3. 关闭文件  
+file_object.close()
+```
+
+**方法2：使用 `for` 循环**
 
 ```python
 
