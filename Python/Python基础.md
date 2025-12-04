@@ -516,9 +516,10 @@ seek
 **练习题2：**
 
 ```python
-########### 用户注册 ###########
+print('========== 用户注册 ==========')  
+  
 # 写文件  
-file_object = open('user_data.txt',mode = 'ab')  
+file_object = open('user_data.txt', mode='ab')  
   
 while True:  
     name = input('请输入姓名：')  
@@ -526,20 +527,22 @@ while True:
         break  
     password = input('请输入密码：')  
   
-    user_info = '{},{}\n'.format(name,password)  
+    user_info = '{},{}\n'.format(name, password)  
     file_object.write(user_info.encode('utf-8'))  
   
 # 关闭文件  
 file_object.close()  
   
-########### 用户登录 ###########
-# 读文件  
-file_object = open('user_data.txt',mode = 'rb')  
+print('========== 用户登录 ==========')  
   
+# 输入登录用户名和密码  
 user_name = input('请输入登录用户名：')  
 user_password = input('请输入登录密码：')  
   
-output_text = '用户名或密码错误'  
+output_text = '用户名或密码错误' # 输出信息  
+  
+# 读文件  
+file_object = open('user_data.txt', mode='rb')  
   
 # 逐行遍历  
 for line in file_object:  
