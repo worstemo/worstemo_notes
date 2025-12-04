@@ -519,7 +519,7 @@ seek
 print('========== 用户注册 ==========')  
   
 # 写文件  
-file_object = open('user_data.txt', mode = 'ab')  
+register_file = open('user_data.txt', mode='ab')  
   
 while True:  
     name = input('请输入姓名：')  
@@ -528,10 +528,10 @@ while True:
     password = input('请输入密码：')  
   
     user_info = '{},{}\n'.format(name, password)  
-    file_object.write(user_info.encode('utf-8'))  
+    register_file.write(user_info.encode('utf-8'))  
   
 # 关闭文件  
-file_object.close()  
+register_file.close()  
   
 print('========== 用户登录 ==========')  
   
@@ -542,10 +542,10 @@ user_password = input('请输入登录密码：')
 output_text = '用户名或密码错误' # 输出信息  
   
 # 读文件  
-file_object = open('user_data.txt', mode = 'rb')  
+logoin_file = open('user_data.txt', mode ='rb')  
   
 # 逐行遍历  
-for line in file_object:  
+for line in logoin_file:  
     line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符  
     info = line_string.split(',')  
     if info[0] == user_name and info[1] == user_password:  
@@ -554,6 +554,6 @@ for line in file_object:
 print(output_text)  
   
 # 关闭文件  
-file_object.close()
+logoin_file.close()
 ```
 
