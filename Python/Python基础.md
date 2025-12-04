@@ -496,7 +496,7 @@ file_object = open('data.txt',mode = 'rb')
 # 逐行遍历
 for line in file_object:  
     line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符
-    if line_string:  # '\n' => ''
+    if line_string:  # '\n' => ''，若为空行，什么也不做；不为空行，输出本行中的单词
         word = line_string.split(',')[1]  
         print(word)  
   
