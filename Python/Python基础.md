@@ -626,3 +626,24 @@ file_object.close()
 ```
 
 - `rb`，读
+
+```python
+file_object = open('hello.txt',mode = 'rb')  
+
+data = file_object.read()  
+data = data.decode('utf-8')
+
+file_object.close()
+```
+
+- `r`，读
+
+>**注意：需要设置 `encoding` 参数，会实现自动 `decode` 解码**
+
+```python
+file_object = open('hello.txt',mode = 'r',encoding = 'utf-8')  
+
+data = file_object.read()  
+
+file_object.close()
+```
