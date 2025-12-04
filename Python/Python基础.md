@@ -477,7 +477,7 @@ for line in file_object:
 file_object.close()
 ```
 
-**练习题：读取文件每行中的单词**
+**练习题1：读取文件每行中的单词**
 
 ```txt
 q,quit,12,1  
@@ -511,5 +511,46 @@ quit
 wait
 equal
 seek
+```
+
+**练习题2：**
+
+```python
+########### 用户注册 ###########
+# 写文件  
+file_object = open('user_data.txt',mode = 'ab')  
+  
+while True:  
+    name = input('请输入姓名：')  
+    if name.upper() == 'Q':  
+        break  
+    password = input('请输入密码：')  
+  
+    user_info = '{},{}\n'.format(name,password)  
+    file_object.write(user_info.encode('utf-8'))  
+  
+# 关闭文件  
+file_object.close()  
+  
+########### 用户登录 ###########
+# 读文件  
+file_object = open('user_data.txt',mode = 'rb')  
+  
+user_name = input('请输入登录用户名：')  
+user_password = input('请输入登录密码：')  
+  
+output_text = '用户名或密码错误'  
+  
+# 逐行遍历  
+for line in file_object:  
+    line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符  
+    info = line_string.split(',')  
+    if info[0] == user_name and info[1] == user_password:  
+        output_text = '登录成功'  
+  
+print(output_text)  
+  
+# 关闭文件  
+file_object.close()
 ```
 
