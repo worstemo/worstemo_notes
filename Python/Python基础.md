@@ -495,11 +495,10 @@ file_object = open('data.txt',mode = 'rb')
 
 # 逐行遍历
 for line in file_object:  
-    line_string = line.decode('utf-8')  # 解码
-    if line_string == '\n':  
-        continue  
-    line_list = line_string.strip().split(',')  
-    print(line_list[1])  
+    line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符
+    if line_string:  # '\n' => ''
+        word = line_string.split(',')[1]  
+        print(word)  
   
 file_object.close()
 ```
