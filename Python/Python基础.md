@@ -559,10 +559,26 @@ login_file.close()
 ```
 
 
-### with上下文
+### with上下文管理
 
->注意：打开文件后一定要记得关闭文件，否则会造成资源浪费
+>**注意：打开文件后一定要记得关闭文件，否则会造成资源浪费**
+>
+>**with上下文管理，让你告别忘记关闭文件：**
+>
+>	离开 `with` 的缩进后，会自动调用 `file_object.close()` 关闭文件 
 
 ```python
-
+print('开始')  
+  
+# 离开缩进后，会自动调用file_object.close()关闭文件  
+with open('hello.txt', mode = 'rb') as file_object:  
+    data = file_object.read().decode('utf-8')  
+    print(data)  
+  
+print('结束')
 ```
+
+
+### 文件打开模式
+
+>
