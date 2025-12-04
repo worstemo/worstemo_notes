@@ -461,5 +461,19 @@ file_object.close()
 **方法2：使用 `for` 循环**
 
 ```python
-
+# 1. 打开文件  
+# hello.txt 文件路径  
+# mode = 'rb' 以读模式打开文件  
+    # r - 读  
+    # b - 字节类型  
+file_object = open('hello.txt', mode = 'rb')  
+  
+# 2. 逐行读取文件内容  
+for line in file_object:  
+    line_string = line.decode('utf-8') # 将字节类型解码为字符串类型  
+    line_string = line_string.strip()  # 去掉每行字符串前后的换行 \n    print(line_string)  
+  
+# 3. 关闭文件  
+file_object.close()
 ```
+
