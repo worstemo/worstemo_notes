@@ -477,7 +477,7 @@ for line in file_object:
 file_object.close()
 ```
 
-**读取文件每行中的单词**
+**练习题：读取文件每行中的单词**
 
 ```txt
 q,quit,12,1  
@@ -496,10 +496,20 @@ file_object = open('data.txt',mode = 'rb')
 # 逐行遍历
 for line in file_object:  
     line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符
-    if line_string:  # '\n' => ''，若为空行，什么也不做；不为空行，输出本行中的单词
+    
+    # '\n' => ''，若为空行，什么也不做；不为空行，输出本行中的单词
+    if line_string:  
         word = line_string.split(',')[1]  
         print(word)  
 
 # 关闭文件
 file_object.close()
 ```
+
+```txt
+quit
+wait
+equal
+seek
+```
+
