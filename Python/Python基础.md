@@ -519,7 +519,7 @@ seek
 print('========== 用户注册 ==========')  
   
 # 写文件  
-file_object = open('user_data.txt', mode='ab')  
+file_object = open('user_data.txt', mode = 'ab')  
   
 while True:  
     name = input('请输入姓名：')  
@@ -542,7 +542,7 @@ user_password = input('请输入登录密码：')
 output_text = '用户名或密码错误' # 输出信息  
   
 # 读文件  
-file_object = open('user_data.txt', mode='rb')  
+file_object = open('user_data.txt', mode = 'rb')  
   
 # 逐行遍历  
 for line in file_object:  
