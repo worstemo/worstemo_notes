@@ -418,7 +418,7 @@ file_object = open('hello.txt', mode='rb')
 content = file_object.read()  
 print(content) # b'hello world' - 字节类型  
 
-# 
+# 将字节类型解码为字符串类型
 content_string = content.decode('utf-8')  
 print(content_string) # hello world - 字符串类型  
   
