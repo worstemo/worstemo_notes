@@ -513,7 +513,7 @@ equal
 seek
 ```
 
-**练习题2：**
+**练习题2：实现用户注册den**
 
 ```python
 print('========== 用户注册 ==========')  
@@ -536,8 +536,8 @@ register_file.close()
 print('========== 用户登录 ==========')  
   
 # 输入登录用户名和密码  
-user_name = input('请输入登录用户名：')  
-user_password = input('请输入登录密码：')  
+user_name = input('用户名：')  
+user_password = input('密码：')  
   
 output_text = '用户名或密码错误' # 输出信息  
   
@@ -557,4 +557,5 @@ print(output_text)
 # 关闭文件  
 login_file.close()
 ```
+
 
