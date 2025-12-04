@@ -542,10 +542,11 @@ user_password = input('请输入登录密码：')
 output_text = '用户名或密码错误' # 输出信息  
   
 # 读文件  
-logoin_file = open('user_data.txt', mode ='rb')  
+login_file = open('user_data.txt', mode ='rb')  
   
 # 逐行遍历  
-for line in logoin_file:  
+for line in login_file:  
+    # line = '用户名,密码\n'  
     line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符  
     info = line_string.split(',')  
     if info[0] == user_name and info[1] == user_password:  
@@ -554,6 +555,6 @@ for line in logoin_file:
 print(output_text)  
   
 # 关闭文件  
-logoin_file.close()
+login_file.close()
 ```
 
