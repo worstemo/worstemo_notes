@@ -477,3 +477,29 @@ for line in file_object:
 file_object.close()
 ```
 
+**读取文件每行中的单词**
+
+```txt
+q,quit,12,1  
+w,wait,122,122  
+e,equal,12,313  
+  
+  
+s,seek,12222,2
+
+```
+
+```python
+# 写模式打开文件
+file_object = open('data.txt',mode = 'rb')  
+
+# 逐行遍历
+for line in file_object:  
+    line_string = line.decode('utf-8')  # 解码
+    if line_string == '\n':  
+        continue  
+    line_list = line_string.strip().split(',')  
+    print(line_list[1])  
+  
+file_object.close()
+```
