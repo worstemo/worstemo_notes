@@ -659,7 +659,7 @@ file_object.close()
 print('========== 用户注册 ==========')  
   
 # 写文件  
-register_file = open('user_data.txt', mode = 'a'， )  
+register_file = open('user_data.txt', mode = 'a'，encoding = 'utf-8')  
   
 while True:  
     name = input('请输入姓名：')  
@@ -668,7 +668,7 @@ while True:
     password = input('请输入密码：')  
   
     user_info = '{},{}\n'.format(name, password)  
-    register_file.write(user_info.encode('utf-8'))  
+    register_file.write(user_info)  
   
 # 关闭文件  
 register_file.close()  
@@ -682,7 +682,7 @@ user_password = input('密码：')
 output_text = '用户名或密码错误' # 输出信息  
   
 # 读文件  
-login_file = open('user_data.txt', mode = 'rb')  
+login_file = open('user_data.txt', mode = 'r'，encoding = 'utf-8')  
   
 # 逐行遍历  
 for line in login_file:  
