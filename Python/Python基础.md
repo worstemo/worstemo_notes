@@ -756,7 +756,22 @@ if 内存使用率 > 98%:
 ![](assets/Python基础/file-20251206004533720.png)
 
 ```python
-
+# 1. 导入Python内置模块  
+import smtplib  
+from email.mime.text import MIMEText  
+from email.utils import formatdate, formataddr  
+  
+# 2. 构建邮件内容  
+msg = MIMEText('Hello QQ!','html','utf-8') # 邮件内容，格式，编码  
+msg['From'] = formataddr(['Worst', '17811276168@163.com']) # 自己名字，自己邮箱  
+msg['To'] = '2957636518@qq.com' # 目标邮箱  
+msg['Subject'] = '163 to QQ' # 邮件主题  
+  
+# 3. 发送邮件  
+server = smtplib.SMTP_SSL('smtp.163.com') # SMTP服务器
+server.login('17811276168@163.com', 'NJ3RSZJZTrMaiPfV') # 自己邮箱，授权码  
+server.sendmail('17811276168@163.com', '2957636518@qq.com', msg.as_string()) # 自己邮箱，收件人邮箱，邮件内容  
+server.quit()
 ```
 
 
