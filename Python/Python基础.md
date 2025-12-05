@@ -668,7 +668,7 @@ while True:
     password = input('请输入密码：')  
   
     user_info = '{},{}\n'.format(name, password)  
-    register_file.write(user_info)  # 不需要再
+    register_file.write(user_info)  # 不需要再手动编码为 utf-8
   
 # 关闭文件  
 register_file.close()  
@@ -687,7 +687,7 @@ login_file = open('user_data.txt', mode = 'r'，encoding = 'utf-8')
 # 逐行遍历  
 for line in login_file:  
     # line = '用户名,密码\n'  
-    line_string = line.strip()  # 不需要解码，并去除尾部换行符  
+    line_string = line.strip()  # 不需要再手动解码 utf-8 为 unicode  
     info = line_string.split(',')  
     if info[0] == user_name and info[1] == user_password:  
         output_text = '登录成功'  
