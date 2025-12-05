@@ -519,7 +519,7 @@ seek
 print('========== 用户注册 ==========')  
   
 # 写文件  
-register_file = open('user_data.txt', mode='ab')  
+register_file = open('user_data.txt', mode = 'ab')  
   
 while True:  
     name = input('请输入姓名：')  
@@ -542,7 +542,7 @@ user_password = input('密码：')
 output_text = '用户名或密码错误' # 输出信息  
   
 # 读文件  
-login_file = open('user_data.txt', mode ='rb')  
+login_file = open('user_data.txt', mode = 'rb')  
   
 # 逐行遍历  
 for line in login_file:  
@@ -652,3 +652,49 @@ print(data_string)
 
 file_object.close()
 ```
+
+**练习题2：实现用户注册和用户登录功能**
+
+```python
+print('========== 用户注册 ==========')  
+  
+# 写文件  
+register_file = open('user_data.txt', mode = 'a'， )  
+  
+while True:  
+    name = input('请输入姓名：')  
+    if name.upper() == 'Q':  
+        break  
+    password = input('请输入密码：')  
+  
+    user_info = '{},{}\n'.format(name, password)  
+    register_file.write(user_info.encode('utf-8'))  
+  
+# 关闭文件  
+register_file.close()  
+  
+print('========== 用户登录 ==========')  
+  
+# 输入登录用户名和密码  
+user_name = input('用户名：')  
+user_password = input('密码：')  
+  
+output_text = '用户名或密码错误' # 输出信息  
+  
+# 读文件  
+login_file = open('user_data.txt', mode = 'rb')  
+  
+# 逐行遍历  
+for line in login_file:  
+    # line = '用户名,密码\n'  
+    line_string = line.decode('utf-8').strip()  # 解码，并去除尾部换行符  
+    info = line_string.split(',')  
+    if info[0] == user_name and info[1] == user_password:  
+        output_text = '登录成功'  
+  
+print(output_text)  
+  
+# 关闭文件  
+login_file.close()
+```
+
