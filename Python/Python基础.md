@@ -630,8 +630,11 @@ file_object.close()
 ```python
 file_object = open('hello.txt',mode = 'rb')  
 
-data = file_object.read()  
-data = data.decode('utf-8')
+# 读取到的是被压缩成 utf-8 编码的字节类型数据
+data = file_object.read()
+# utf-8编码（字节类型） -> unicode编码（字符串类型）
+data_string = data.decode('utf-8')
+print(data_string)
 
 file_object.close()
 ```
@@ -643,7 +646,9 @@ file_object.close()
 ```python
 file_object = open('hello.txt',mode = 'r',encoding = 'utf-8')  
 
-data = file_object.read()  
+# 直接读取到的是 unicode 编码的原始字符串，不需要再 decode 解码
+data = file_object.read()
+print(data_string)
 
 file_object.close()
 ```
