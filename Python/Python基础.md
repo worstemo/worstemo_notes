@@ -825,7 +825,7 @@ def 函数名(形式参数1, 形式参数2): # 形式参数（形参）
 >	
 >	**2. 实参可以是任意类型：None、bool、int、str、list、dict ... ...**
 
-**练习题：**
+#### 练习题
 
 1. 定义函数，接收字符串类型的参数，计算字符串中 'a' 出现的次数并输出
 
@@ -859,17 +859,18 @@ count_chars(text, chars)
 3. 定义函数，接收字1个参数：`列表`，输出所有以 'a' 为开头的元素构成的新列表
 
 ```python
-def count_chars(data_string, key):  
-    count = 0  
-    for char in data_string:  
-        if char == key:  
-            count += 1  
-    print(count)  
+def list_a_start(lst):  
+    list_a = []  
+    for item in lst:  
+        if item.startswith('a'):  
+            list_a.append(item)  
+    print(list_a)  
   
-text = input('请输入字符串：')  
-chars = input('请输入待统计的字符：')  
-count_chars(text, chars)
+test_lst = input('请输入字符串（以,间隔）：').split(',')  
+list_a_start(test_lst)
 ```
+
+#### 默认参数
 
 
 
