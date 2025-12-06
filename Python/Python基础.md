@@ -935,16 +935,70 @@ function(a = 12,b = 'dog',c = [1222, 1110])
 
 ### 函数返回值
 
+>**注意：**
+>
+>	**1. 返回值可以是任意类型**
+>	
+>	**2. 函数没有返回值，默认返回 `None` 空值**
+>	
+>	**3. 在函数执行过程中，一旦遇到 `return` ，立即结束当前函数的执行，并返回值**
 
+```python
+def func1():
+	return 1 # 返回 整型 1
+```
 
+```python
+def func2():
+	return [1,2,3] # 返回 列表 [1,2,3]
+```
 
+```python
+def func3():
+	return (1,2,3) # 返回 元组 (1,2,3)
+```
 
+>**注意下面这种写法**
 
+```python
+def func4():
+	return 1,2,3 # 返回 元组 (1,2,3)
+```
 
+```python
+def func5():
+	# 无返回值 默认返回 None
+```
 
+```python
+def func6():
+	print(1)
+	return 2 # 函数终止
+	print(3) # 该语句不执行
+```
 
+```python
+def func7():
+	for i in range(100):
+		return i
 
+res = func7() # res = 0
+```
 
+```python
+def func7():
+	for i in range(100):
+		break
 
+res = func7() # res = None
+```
+
+```python
+def func7():
+	for i in range(100):
+		continue
+
+res = func7() # res = None
+```
 
 
