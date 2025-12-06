@@ -1050,6 +1050,32 @@ print(res)
 None
 ```
 
+3. 看代码写结果
+
+```python
+def func():
+	print('开始')
+	for i in range(2):
+		print(i)
+		break
+	if 2 == 2:
+		return 999
+	else:
+		return 123
+	print('结束')
+
+res = func()
+print(res)
+```
+
+```txt
+开始
+0
+结束
+999
+```
+
+
 
 
 
