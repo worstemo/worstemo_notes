@@ -827,7 +827,7 @@ def 函数名(形式参数1, 形式参数2): # 形式参数（形参）
 
 **练习题：**
 
-1. 定义函数，接受字符串类型的参数，计算字符串中 'a' 出现的次数并输出
+1. 定义函数，接收字符串类型的参数，计算字符串中 'a' 出现的次数并输出
 
 ```python
 def count_a(text):  
@@ -835,14 +835,25 @@ def count_a(text):
     for char in text:  
         if char == 'a':  
             count += 1  
-  
     print(count)  
   
 text = input('请输入字符串：')  
 count_a(text)
 ```
 
+2. 定义函数，接收字2个参数：`字符串-文本`、`字符串-关键字`，计算关键字在文本中的出现次数
 
+```python
+def count_str(text):  
+    count = 0  
+    for char in text:  
+        if char == 'a':  
+            count += 1  
+    print(count)  
+  
+text = input('请输入字符串：')  
+count_a(text)
+```
 
 
 
