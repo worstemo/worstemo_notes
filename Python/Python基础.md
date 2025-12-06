@@ -872,10 +872,22 @@ list_a_start(test_lst)
 
 #### 默认参数
 
+>在定义函数时，也可以为某些参数设置默认值
+>
+>**注意：函数定义时设置的默认参数，只能放在最后**
 
+定义函数，接收字2个参数：`字符串-文本`、`字符串-关键字`，计算关键字在文本中的出现次数
 
-
-
-
+```python
+def count_chars(data_string, key = 'a'):  # 设置默认参数'a'
+    count = 0  
+    for char in data_string:  
+        if char == key:  
+            count += 1  
+    print(count)  
+  
+text = input('请输入字符串：')  
+count_chars(text) # 使用默认参数，统计text中'a'的出现次数
+```
 
 
