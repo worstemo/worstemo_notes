@@ -1221,6 +1221,11 @@ v2 = v1
 ```python
 def func(s1):
 	s1.upper()
+
+v1 = 'wupeiqi'
+func(v1)
+
+print(v1) # v1不变，v1 = 'wupeiqi'
 ```
 
 
