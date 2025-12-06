@@ -1089,8 +1089,14 @@ print(res)
 >**提示：判断文件路径是否存在**
 
 ```python
-
+import os  
+  
+file_path = r'D:\project\Python Project\pylearn\day01\text.py'  
+res = os.path.exists(file_path)  
+print(res) # True/Fales
 ```
 
+```python
 
+```
 
