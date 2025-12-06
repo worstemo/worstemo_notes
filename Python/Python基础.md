@@ -1019,5 +1019,39 @@ res = func7() # res = None
 1. 定义一个函数，通过位置传参传入多个整型参数，对传入的参数进行求和，并返回该和值
 
 ```python
-
+def get_sum(*args):  
+    res = 0  
+    for item in args:  
+        res += item  
+    return res  
+  
+v1 = get_sum(1,22,333,4444)  
+print(v1) # 4800
 ```
+
+2. 看代码写结果
+
+```python
+def func():
+	print('开始')
+	for i in range(2):
+		print(i)
+	print('结束')
+
+res = func()
+print(res)
+```
+
+```txt
+开始
+0
+1
+结束
+None
+```
+
+
+
+
+
+
