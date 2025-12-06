@@ -753,8 +753,6 @@ if 内存使用率 > 98%:
 >
 >SMTP服务器: smtp.163.com
 
-![](assets/Python基础/file-20251206004533720.png)
-
 ```python
 # 1. 导入Python内置模块  
 import smtplib  
@@ -774,4 +772,6 @@ server.sendmail('17811276168@163.com', '2957636518@qq.com', msg.as_string()) # �
 server.quit()
 ```
 
+![](assets/Python基础/file-20251206004533720.png)
 
+h
