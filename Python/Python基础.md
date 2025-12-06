@@ -890,4 +890,33 @@ text = input('请输入字符串：')
 count_chars(text) # 使用默认参数，统计text中'a'的出现次数
 ```
 
+### 动态参数
+
+> `*`：通过**位置传参**传入多个参数，传入的参数统一打包为**元组**
+
+```python
+def fuction(*a):
+	print(a)
+
+function(1)     # 元组 (1,)
+function([1222, 1110])     # 元组 ([1222, 1110],)
+function((1222, 1110))     # 元组 ((1222, 1110),)
+function(1, 22, 333)     # 元组 (1, 22, 333)
+function('cat', 99, True)     # 元组 ('cat', 99, True)
+function(12, 'dog', [1222, 1110])     # 元组 (12, 'dog', [1222, 1110])
+```
+
+> `**`：通过**关键字传参**传入多个参数，传入的参数统一打包为**字典**
+
+```python
+def fuction(**b):
+	print(b)
+
+function(a = 1)     # 字典 {'a':1}
+function(a = [1222, 1110])     # 字典 {'a':[1222, 1110]}
+function(a = 1,b = 22,c = 333)     # 字典 {'a':1, 'b':22, 'c':333}
+function(a = 'cat',b = 99,c = True)     # 字典 {'a':'cat', 'b':99, 'c':True}
+function(a = 12,b = 'dog',c = [1222, 1110])     
+# 字典 {'a':12, 'b':'dog', 'c':[1222, 1110]}
+```
 
