@@ -1225,17 +1225,17 @@ def func(s1):
 v1 = 'wupeiqi'
 func(v1)
 
-print(v1) # 字符串不k变，v1 = 'wupeiqi'
+print(v1) # 字符串不可变，v1 = 'wupeiqi'
 ```
 
 ```python
 def func(s1):
-	s1.upper()
+	s1.append(666)
 
-v1 = 'wupeiqi'
+v1 = [1,22,333]
 func(v1)
 
-print(v1) # v1不变，v1 = 'wupeiqi'
+print(v1) # 列表可变，v1 = [1,22,333,666]
 ```
 
 
