@@ -1122,9 +1122,36 @@ print(res)
 
 >函数必须先定义，再调用
 
+看代码写结果
 
+```python
+def f1():
+	print(123)
+	return 1
 
+def f2(arg):
+	data = arg + 100
+	return data
 
+def f3(num):
+	print(num)
+
+v1 = f1()     # v1 = 1
+v2 = f2(v1)   # v2 = 101
+v3 = f3(v2)   # v3 = None
+
+print(v1)
+print(v2)
+print(v3)
+```
+
+```txt
+123
+101
+1
+101
+None
+```
 
 
 
