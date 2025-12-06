@@ -1100,16 +1100,23 @@ print(res) # True/Fales
 import os  
   
 def key_in_file(path, key):  
-    lst = []  
+    # 文件不存在  
     if not os.path.exists(path):  
         return None  
+    # 文件存在  
+    data_list = []  
+    # with 上下文管理，不需要手动关闭文件  
     with open(path, mode = 'r', encoding = 'utf-8') as file_object:  
         for line in file_object:  
+            line = line.strip() # 去掉换行符  
             if key in line:  
-                lst.append(line.strip())  
-    return lst  
+                data_list.append(line)  
+    return data_list  
   
 res = key_in_file(r'D:\project\Python Project\pylearn\day01\demo.py', 'qq')  
 print(res)
 ```
+
+
+### 函数调用
 
