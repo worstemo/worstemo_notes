@@ -1097,6 +1097,19 @@ print(res) # True/Fales
 ```
 
 ```python
-
+import os  
+  
+def key_in_file(path, key):  
+    lst = []  
+    if not os.path.exists(path):  
+        return None  
+    with open(path, mode = 'r', encoding = 'utf-8') as file_object:  
+        for line in file_object:  
+            if key in line:  
+                lst.append(line.strip())  
+    return lst  
+  
+res = key_in_file(r'D:\project\Python Project\pylearn\day01\demo.py', 'qq')  
+print(res)
 ```
 
