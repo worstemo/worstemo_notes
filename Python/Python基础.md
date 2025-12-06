@@ -1218,7 +1218,10 @@ v2 = v1
 
 ![](assets/Python基础/file-20251206235717996.png)
 
-1
+```python
+def func(s1):
+	s1.upper()
+```
 
 
 
