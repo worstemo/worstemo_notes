@@ -1001,4 +1001,11 @@ def func7():
 res = func7() # res = None
 ```
 
+```python
+def func7():
+	for i in range(100):
+		print(i)
+
+res = func7() # res = None
+```
 
