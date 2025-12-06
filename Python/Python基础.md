@@ -844,15 +844,31 @@ count_a(text)
 2. 定义函数，接收字2个参数：`字符串-文本`、`字符串-关键字`，计算关键字在文本中的出现次数
 
 ```python
-def count_str(text):  
+def count_chars(data_string, key):  
     count = 0  
-    for char in text:  
-        if char == 'a':  
+    for char in data_string:  
+        if char == key:  
             count += 1  
     print(count)  
   
 text = input('请输入字符串：')  
-count_a(text)
+chars = input('请输入待统计的字符：')  
+count_chars(text, chars)
+```
+
+3. 定义函数，接收字1个参数：`列表`，输出所有以 'a' 为开头的元素构成的新列表
+
+```python
+def count_chars(data_string, key):  
+    count = 0  
+    for char in data_string:  
+        if char == key:  
+            count += 1  
+    print(count)  
+  
+text = input('请输入字符串：')  
+chars = input('请输入待统计的字符：')  
+count_chars(text, chars)
 ```
 
 
