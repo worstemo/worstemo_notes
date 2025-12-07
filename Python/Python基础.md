@@ -1385,6 +1385,26 @@ root
 root
 ```
 
+4. 看代码写结果
+
+```python
+DIGIT = [1,22,333]
+
+def func():
+	global DIGIT
+	DIGIT = [4444,55555]
+	print(DIGIT)
+
+print(DIGIT)
+func()
+print(DIGIT)
+```
+
+```txt
+[1,22,333]
+[4444,55555]
+[4444,55555]
+```
 
 
 
