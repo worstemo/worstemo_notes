@@ -1255,5 +1255,28 @@ print(v1) # 列表可变，v1 = [1,22,333,666]
 >	
 >	**3. Python代码只要一运行，就会有一个全局的作用域**
 
+```python
+name = '武沛齐'  
+age = 999  
+  
+if True:  
+    email = 'xxx@live.com'  
+else:  
+    gender = '男'  
+  
+for i in range(10):  
+    pass  
+  
+print(name) # 武沛齐  
+print(age) # 999  
+print(email) # xxx@live.com  
+print(i) # 9
+
+print(gender) # 报错
+
+age = 100
+print(age) # 100
+```
+
 
 
