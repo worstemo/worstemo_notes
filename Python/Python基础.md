@@ -1492,17 +1492,20 @@ print(func) # 1
 ```python
 def func():  
     print(123)  
-  
-data = func()  
-print(data) # None
+
+print(func) # <function func at 0x000001463CD5A2A0>
+
+v1 = func()  
+v2 = func
+v3 = v2()
+
+print(v1) # None
+print(v2) # <function func at 0x000001463CD5A2A0>
+print(v3) # None
 ```
 
 ```python
-def func():  
-    print(123)  
-  
-data = func  
-print(data) # <function func at 0x000001463CD5A2A0>
+
 ```
 
 
