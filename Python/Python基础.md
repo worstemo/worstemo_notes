@@ -1364,6 +1364,26 @@ print(NAME)
 张点墨
 ```
 
+3. 看代码写结果
+
+```python
+NAME = 'root'
+
+def func():
+	global NAME
+	NAME.upper()
+	print(NAME)
+
+print(NAME)
+func()
+print(NAME)
+```
+
+```txt
+root
+root
+root
+```
 
 
 
