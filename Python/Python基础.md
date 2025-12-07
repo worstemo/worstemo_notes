@@ -1319,8 +1319,46 @@ print(name) # 武沛齐
 
 ==**注意：定义全局变量时，要使用大写字母，多个单词使用下划线连接**==
 
+#### global关键字
 
+>**`global` 关键字是在函数中，用于表示此变量不是新创建的数据，而是全局变量中的数据（地址指向相同）**
 
+```python
+NAME = '武沛齐'
+
+def func():
+	NAME = '张点墨'
+	print(NAME)
+
+print(NAME)
+func()
+print(NAME)
+```
+
+```txt
+武沛齐
+张点墨
+武沛齐
+```
+
+```python
+NAME = '武沛齐'
+
+def func():
+	global NAME
+	NAME = '张点墨'
+	print(NAME)
+
+print(NAME)
+func()
+print(NAME)
+```
+
+```txt
+武沛齐
+张点墨
+张点墨
+```
 
 
 
