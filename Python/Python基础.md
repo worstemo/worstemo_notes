@@ -1500,12 +1500,20 @@ v2 = func
 v3 = v2()
 
 print(v1) # None
-print(v2) # <function func at 0x000001463CD5A2A0>
+print(v2) # 函数 <function func at 0x000001463CD5A2A0>
 print(v3) # None
 ```
 
 ```python
+def func():  
+	return 123  
 
+data_list = [1,22,func,func()]
+
+data_list[2] # 函数 <function func at 0x000001C3163CA2A0>
+data_list[3] # 123
+
+v1 = data_list[2]() # v1 = 123
 ```
 
 
