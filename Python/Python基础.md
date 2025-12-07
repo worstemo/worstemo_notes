@@ -1481,8 +1481,29 @@ print(DIGIT)
 
 ### 函数名就是变量名
 
+```python
+def func():
+	print(123)
 
+func = 1
+print(func) # 1
+```
 
+```python
+def func():  
+    print(123)  
+  
+data = func()  
+print(data) # None
+```
+
+```python
+def func():  
+    print(123)  
+  
+data = func  
+print(data) # <function func at 0x000001463CD5A2A0>
+```
 
 
 
