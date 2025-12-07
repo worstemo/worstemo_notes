@@ -1447,6 +1447,28 @@ print(DIGIT)
 [1,22,333,4444]
 ```
 
+7. 看代码写结果
+
+```python
+DIGIT = [1,22,333]
+
+def func():
+	DIGIT = [1,2,3]
+	DIGIT.append(4444)
+	print(DIGIT)
+
+print(DIGIT)
+func()
+print(DIGIT)
+```
+
+```txt
+[1,22,333]
+[1,2,3,4444]
+[1,22,333]
+```
+
+
 
 
 
