@@ -2214,13 +2214,31 @@ import random
 
 char_list = []
 for i in range(4):
-	num = random.randint(65,90)
-	char = chr(num)
+	num = random.randint(65,90) # 65 - A; 90 - Z
+	char = chr(num) # 十进制 => 字符
 	char_list.append(char)
 
 res = ''.join(char_list)
 print(res)
 ```
+
+![](assets/Python基础/file-20251208233518039.png)
+![](assets/Python基础/file-20251208233535427.png)
+
+#### 5. 数据类型相互转换
+
+1. `int()` ：字符 => 十进制
+
+```python
+res = int('武') # 27494
+```
+
+2. `str()` ：十进制 => 字符
+
+```python
+res = chr(27494) # 武
+```
+
 
 ### 推导式
 
