@@ -1566,7 +1566,7 @@ else:
 	show_users()
 ```
 
->vip版：函数名作为变量名放入列表中，实现函数的调用
+>vip版：函数名作为变量名放入列表中，基于索引实现函数的调用
 
 ```python
 def register():
@@ -1591,6 +1591,31 @@ func_list = [register,login,show_users]
 func_list[choice - 1]()
 ```
 
+>vvip版：函数名作为变量名放入字典中，基于索引或 `get()` 方法实现函数的调用
+
+```python
+def register():
+	pass
+
+def login():
+	pass
+
+def show_users():
+	pass
+
+print('欢迎进入用户管理系统')
+print('1.注册；2.登录；3.查看所有用户')
+
+choice = input('请输入功能序号：')
+
+func_dict = {
+	'1':register,
+	'2':login,
+	'3':show_users
+}
+# func_dict[choice]()
+func_dict.get(choice)
+```
  
 
 ### lambda表达式
