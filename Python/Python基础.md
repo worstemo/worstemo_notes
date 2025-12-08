@@ -2450,7 +2450,7 @@ print(new_list) # ['1', '11', '12', '2', '3']
 
 ##### 练习题：文件名排序
 
-1. 
+1. 情境1
 
 ```python
 video_list = [  
@@ -2473,7 +2473,7 @@ print(new_list)
 ['1 初识Python.mp4', '2 认识数据结构.mp4', '3 整型.mp4', '4 字符串.mp4', '5 列表.mp4', '6 元组.mp4', '7 字典.mp4', '8 集合.mp4', '9 函数.mp4']
 ```
 
-2. 
+2. 情境2
 
 ```python
 video_list = [  
@@ -2498,6 +2498,67 @@ print(new_list) # 乱序
 ```txt
 ['1 初识Python.mp4', '10 模块.mp4', '11 面向对象.mp4', '12 HTML.mp4', '2 认识数据结构.mp4', '3 整型.mp4', '4 字符串.mp4', '5 列表.mp4', '6 元组.mp4', '7 字典.mp4', '8 集合.mp4', '9 函数.mp4']
 ```
+
+3. 情境3
+
+>使用 `key` 参数自定义排序的规则
+
+```python
+video_list = [  
+    '1 初识Python.mp4',  
+    '11 面向对象.mp4',  
+    '7 字典.mp4',  
+    '8 集合.mp4',  
+    '12 HTML.mp4',  
+    '6 元组.mp4',  
+    '10 模块.mp4',  
+    '4 字符串.mp4',  
+    '9 函数.mp4',  
+    '2 认识数据结构.mp4',  
+    '3 整型.mp4',  
+    '5 列表.mp4'  
+]  
+  
+# 自定义排序的规则  
+def func(file_name):  
+    return int(file_name.split(' ')[0])  
+  
+new_list = sorted(video_list, key = func)  
+print(new_list)
+```
+
+```txt
+['1 初识Python.mp4', '2 认识数据结构.mp4', '3 整型.mp4', '4 字符串.mp4', '5 列表.mp4', '6 元组.mp4', '7 字典.mp4', '8 集合.mp4', '9 函数.mp4', '10 模块.mp4', '11 面向对象.mp4', '12 HTML.mp4']
+```
+
+>使用 `lambda` 表达式优化代码
+
+```python
+video_list = [  
+    '1 初识Python.mp4',  
+    '11 面向对象.mp4',  
+    '7 字典.mp4',  
+    '8 集合.mp4',  
+    '12 HTML.mp4',  
+    '6 元组.mp4',  
+    '10 模块.mp4',  
+    '4 字符串.mp4',  
+    '9 函数.mp4',  
+    '2 认识数据结构.mp4',  
+    '3 整型.mp4',  
+    '5 列表.mp4'  
+]  
+  
+# 自定义排序的规则  
+new_list = sorted(video_list, key = lambda file_name : )  
+print(new_list)
+```
+
+```txt
+['1 初识Python.mp4', '2 认识数据结构.mp4', '3 整型.mp4', '4 字符串.mp4', '5 列表.mp4', '6 元组.mp4', '7 字典.mp4', '8 集合.mp4', '9 函数.mp4', '10 模块.mp4', '11 面向对象.mp4', '12 HTML.mp4']
+```
+
+
 
 
 ### 推导式
