@@ -2275,14 +2275,14 @@ print('i love python')
 reasson = input('why do you love python?')
 ```
 
-3. `open()` ：打开文件
+4. `open()` ：打开文件
 
 ```python
 with open(r'D:\Python_Project\test.txt', mode = 'w', encoding = 'utf-8') as file_object:
 	file_object.write('i love python')
 ```
 
-3. `range()` ：一般配合 `for` 循环使用
+5. `range()` ：一般配合 `for` 循环使用
 
 ```python
 for i in range(2):
@@ -2294,7 +2294,7 @@ for i in range(2):
 1
 ```
 
-3. `hash()` ：计算哈希值
+6. `hash()` ：计算哈希值
 
 >**注意：**
 >
@@ -2320,6 +2320,10 @@ Traceback (most recent call last):
           ^^^^^^^^^^^^^
 TypeError: unhashable type: 'list'
 ```
+
+
+7. `type()` ：查看数据类型
+
 
 ### 推导式
 
