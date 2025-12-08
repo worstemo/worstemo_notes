@@ -1516,8 +1516,58 @@ data_list[3] # 123
 v1 = data_list[2]() # v1 = 123
 ```
 
+#### 练习题：用户管理系统
 
+>普通版
 
+```python
+def register():
+	pass
+
+def login():
+	pass
+
+def show_users():
+	pass
+
+print('欢迎进入用户管理系统')
+print('1.注册；2.登录；3.查看所有用户')
+
+choice = input('请输入功能序号：')
+choice = int(choice)
+
+if choice == 1:
+	register()
+elif choice == 2:
+	login()
+else:
+	show_users()
+```
+
+>vip版
+
+```python
+def register():
+	pass
+
+def login():
+	pass
+
+def show_users():
+	pass
+
+print('欢迎进入用户管理系统')
+print('1.注册；2.登录；3.查看所有用户')
+
+choice = input('请输入功能序号：')
+choice = int(choice)
+
+func_list = [register,login,show_users]
+# func_list[0]() - 注册
+# func_list[1]() - 登录
+# func_list[2]() - 查看所有用户
+func_list[choice - 1]()
+```
 
 
 
