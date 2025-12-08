@@ -2324,6 +2324,10 @@ TypeError: unhashable type: 'list'
 
 7. `type()` ：查看数据类型
 
+```python
+res = type('酱油瓶') # 
+```
+
 
 ### 推导式
 
