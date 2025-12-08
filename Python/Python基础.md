@@ -2308,6 +2308,14 @@ res = hash('酱油瓶') # res = 856608655605105022
 ```
 
 
+```txt
+Traceback (most recent call last):
+  File "D:\Project\Python Project\pylearn\day01\text.py", line 1, in <module>
+    res = hash([1,2,3])
+          ^^^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+```
+
 ### 推导式
 
 
