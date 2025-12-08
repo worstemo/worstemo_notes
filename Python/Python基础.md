@@ -2273,7 +2273,9 @@ print('i love python')
 
 4. `open()` ：打开文件
 
-5. `range()` ：打印
+5. `range()` ：一般配合 `for` 循环使用
+
+6. `hash()` ：j
 
 
 ### 推导式
