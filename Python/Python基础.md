@@ -2278,7 +2278,7 @@ reasson = input('why do you love python?')
 3. `open()` ：打开文件
 
 ```python
-with open(r'')
+with open(r'D:\Python_Projr')
 ```
 
 3. `range()` ：一般配合 `for` 循环使用
