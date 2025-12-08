@@ -2255,7 +2255,7 @@ res = str(27) # res = '27'
 
 9. `bytes()` ：字符串 => 字节类型
 
-#### 6. 常用
+#### 6. 常用：I/O、文件 ...（个）
 
 1. `len()` ：求（字符串、列表、元组、集合、字典）长度
 
@@ -2325,6 +2325,46 @@ TypeError: unhashable type: 'list'
 
 ```python
 res = type('酱油瓶') # <class 'str'>
+```
+
+##### 练习题：判断参数类型
+
+```python
+def func_class(data):  
+    if type(data) == str:  
+        return '字符串'  
+    if type(data) == bytes:  
+        return '字节'  
+    if type(data) == int:  
+        return '整型'  
+    if type(data) == float:  
+        return '浮点型'  
+    if type(data) == list:  
+        return '列表'  
+    if type(data) == tuple:  
+        return '元组'  
+    if type(data) == set:  
+        return '集合'  
+    if type(data) == dict:  
+        return '字典'  
+    if type(data) == bool:  
+        return '布尔类型'  
+  
+v1 = func_class(0) # 整型  
+v2 = func_class('') # 字符串  
+v3 = func_class((1,)) # 元组
+```
+
+8. `calllable()` ：是否可执行（后面是否可以加括号执行）
+
+```python
+def func():
+	pass
+
+name = '酱油瓶'
+
+v1 = callable(func) # True
+v2 = callable(name) # False
 ```
 
 
