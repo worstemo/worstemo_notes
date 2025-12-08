@@ -2127,13 +2127,13 @@ res = bin(2) # res = '0b10'
 2. `oct()` ：十进制 => 八进制
 
 ```python
-res = oct() # res = '0b10'
+res = oct(8) # res = '0o10'
 ```
 
 3. `hex()` ：十进制 => 十六进制
 
 ```python
-res = bin(2) # res = '0b10'
+res = bin(16) # res = '0x10'
 ```
 
 ### 推导式
