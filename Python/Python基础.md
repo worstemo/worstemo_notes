@@ -1974,13 +1974,13 @@ res = f1('中国人') # res = '安徽人'
 ```
 
 ```python
-f2 = lambda v1,v2 : v1.insert(v2)
+f2 = lambda v1,v2 : v1.insert(0,v2)
 
-res = f2([11,22],99) # res = '安徽人'
+res = f2([11,22],99) # res = None
 ```
 
 ```python
-f1 = lambda data : data.replace('中国','安徽')
+f3 = lambda name : name.split['-']
 
 res = f1('中国人') # res = '安徽人'
 ```
