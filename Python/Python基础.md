@@ -1819,7 +1819,8 @@ def download(file_name, url):
         file_object.write(res.content)  
   
 def get_image():  
-    """ 图片专区 """    print('==========图片专区==========')  
+    """ 图片专区 """
+    print('==========图片专区==========')  
     image_dict = {  
         '1': ('王者荣耀图标', 'https://tse3-mm.cn.bing.net/th/id/OIP-C.Me-HzHoLbPeyOneew4qQUAAAAA')  
     }  
@@ -1843,7 +1844,8 @@ def get_image():
         download(file_name, url)  
   
 def get_video():  
-    """ 短视频专区 """    print('==========短视频专区==========')  
+    """ 短视频专区 """
+    print('==========短视频专区==========')  
     video_dict = {  
         '1': {  
             'title': 'OC-Welcome to our world!',  
