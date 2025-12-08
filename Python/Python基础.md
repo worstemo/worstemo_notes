@@ -2269,7 +2269,11 @@ res = len('i love python') # res = 13
 print('i love python')
 ```
 
-3. `print()` ：打印
+3. `input()` ：输入
+
+4. `open()` ：打开文件
+
+5. `range()` ：打印
 
 
 ### 推导式
