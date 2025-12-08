@@ -1777,7 +1777,20 @@ pip install requests
 2. 基于第三方的模块实现下载
 
 ```python
-
+import requests  
+  
+# 1.从网络上下载图片  
+res = requests.get(  
+    url = 'https://tse3-mm.cn.bing.net/th/id/OIP-C.Me-HzHoLbPeyOneew4qQUAAAAA',  
+    headers = {  
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'  
+    }  
+)  
+  
+# 2.保存到本地  
+file_object = open('王者荣耀.png', mode = 'wb')  
+file_object.write(res.content)  
+file_object.close()
 ```
 
 ### lambda表达式
