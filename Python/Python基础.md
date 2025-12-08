@@ -1542,6 +1542,46 @@ else:
 	func_object()
 ```
 
+>**注意：一个函数的函数名可以作为另一个函数的参数**
+
+```python
+def do():
+	print('do')
+
+def func(a1,a2):
+	print(a1)
+	a2()
+
+func(11,do)
+```
+
+```txt
+11
+do
+```
+
+```python
+def do():
+	print('do')
+
+def func(a1,a2):
+	print(a1)
+	res = a2()
+	print(res)
+	return 123
+
+v1 = func(11,do)
+print(v1)
+```
+
+```txt
+11
+do
+None
+123
+```
+
+
 #### 练习题1：用户管理系统
 
 >普通版
