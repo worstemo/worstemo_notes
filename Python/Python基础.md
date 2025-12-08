@@ -2424,13 +2424,19 @@ for index, item in enumerate(goods, 1):  # index从1开始自增
 data_list = [22,3,444,1]   
 data_list.sort() # 直接操作原列表  
 print(data_list) # [1, 3, 22, 444]
+
+data_list = [22,3,444,1]  
+data_list.sort(reverse = True) # 直接操作原列表  
+print(data_list) # [444, 22, 3, 1]
 ```
 
 ```python
 data_list = [22,3,444,1]  
-new_list = sorted(data_list) # 返回一个新列表  
+new_list1 = sorted(data_list) # 返回一个新列表 
+new_list2 = sorted(data_list,reverse = True) # 返回一个新列表  
 print(data_list) # [22, 3, 444, 1]
-print(new_list) # [1, 3, 22, 444]
+print(new_list1) # [1, 3, 22, 444] 
+print(new_list2) # [444, 22, 3, 1]
 ```
 
 ### 推导式
