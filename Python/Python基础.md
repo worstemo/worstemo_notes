@@ -1650,9 +1650,7 @@ else: # data = 函数名
 - 数据结构
 	- 图片
 ```python
-image_dict = {
-	'1':()
-}
+
 ```
 	- NBA
 	- 短视频
