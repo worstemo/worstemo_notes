@@ -2367,6 +2367,36 @@ v1 = callable(func) # True
 v2 = callable(name) # False
 ```
 
+看代码写结果
+
+```python
+def func():
+	return 123
+
+data_list = [1,2,3,func]
+# 循环列表元素，若可以执行，则执行并获取返回值
+for item in data_list:
+	if callable(item)
+		res = item()
+		print(res)
+	else:
+		print(item)
+```
+
+```txt
+1
+2
+3
+123
+```
+
+9. `enumerate()` ：循环的过程中，自动提供自增的一列
+
+```python
+
+```
+
+
 
 ### 推导式
 
