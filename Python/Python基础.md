@@ -2285,7 +2285,13 @@ with open(r'D:\Python_Project\test.txt', mode = 'w', encoding = 'utf-8') as file
 3. `range()` ：一般配合 `for` 循环使用
 
 ```python
-reasson = input('why do you love python?')
+for i in range(2):
+	print(i)
+```
+
+```txt
+0
+1
 ```
 
 3. `hash()` ：计算哈希值
@@ -2296,6 +2302,15 @@ reasson = input('why do you love python?')
 >	
 >	**2. 列表、字典不可哈希**
 
+
+```python
+data = hash()
+```
+
+```txt
+0
+1
+```
 
 
 
