@@ -2260,14 +2260,16 @@ res = str(27) # res = '27'
 1. `len()` ：求（字符串、列表、元组、集合、字典）长度
 
 ```python
-res = len('1') # res = 1
+res = len('i love python') # res = 13
 ```
 
 2. `print()` ：打印
 
 ```python
-res = str(27) # res = '27'
+print('i love python')
 ```
+
+3. `print()` ：打印
 
 
 ### 推导式
