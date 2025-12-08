@@ -1912,7 +1912,12 @@ run()
 >`lambda` 表达式（匿名函数），即一行代码实现定义简单的函数，在特定情况下，使代码更简洁
 
 ```python
-
+def f1():  
+    return 123  
+  
+# [lambda 形参 : 函数体]  
+f1 = lambda : 123 # 函数体中写了123，内部自动会执行一个return  
+res = f1() # res = 123
 ```
 
 ```python
