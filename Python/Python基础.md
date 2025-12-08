@@ -1930,7 +1930,12 @@ res = f2(1,2) # res = 3
 ```
 
 ```python
+def f3(daata_string):  
+    return daata_string.upper()  
 
+# [lambda 形参 : 函数体]
+f3 = lambda daata_string : daata_string.upper() # 函数体中写了daata_string.upper()，内部自动会执行一个return daata_string.upper()
+res = f3("root") # res = ROOT
 ```
 
 ```python
