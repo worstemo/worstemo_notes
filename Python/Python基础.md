@@ -2114,7 +2114,7 @@ res2 = all( [0,1,2] ) # res2 = True
 res3 = all( [0,''] ) # res3 = False
 ```
 
-#### 进制转换
+#### 3. 进制转换
 
 >**注意：返回值都是字符串类型**
 
@@ -2159,9 +2159,19 @@ res = int('10', base = 16) # res = 16
 >	4. 将整体二进制数转换为十进制数
 
 ```python
-ip = '192.168.11.223'
-func = lambda ip : int(''.join(bin(int(i))[2:].zfill(8) for i in ip.split('.')),base = 2)  
-print(func(ip))
+ip = '192.168.11.223'  
+  
+str_list = ip.split('.') # 1.分组  
+  
+bin_str_list = []  
+  
+for item in str_list:  
+    bin_str = bin(int(item))[2:] # 2.转二进制，并去除前缀 0b    bin_fill_str = bin_str.zfill(8) # 补足到8位，不足的补0  
+    bin_str_list.append(bin_fill_str)  
+  
+num_string = ''.join(bin_str_list) # 3.拼接成一串二进制字符串  
+num = int(num_string) # 4.将二进制字符串转为十进制  
+print(num)
 ```
 
 
@@ -2171,6 +2181,22 @@ print(func(ip))
 ip = '192.168.11.223'
 func = lambda ip : int(''.join(bin(int(i))[2:].zfill(8) for i in ip.split('.')),base = 2)  
 print(func(ip))
+```
+
+#### 4. 进制转换
+
+>**注意：返回值都是字符串类型**
+
+1. `bin()` ：十进制 => 二进制
+
+```python
+res = bin(2) # res = '0b10'
+```
+
+2. `oct()` ：十进制 => 八进制
+
+```python
+res = oct(8) # res = '0o10'
 ```
 
 ### 推导式
