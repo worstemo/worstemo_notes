@@ -1676,6 +1676,8 @@ video_dict = {
 }
 ```
 
+##### 实现除下载外的功能
+
 ```python
 def get_image():  
     """ 图片专区 """
@@ -1766,7 +1768,7 @@ def run():
 run()
 ```
 
-#### 实现下载功能
+##### 实现下载功能
 
 1. 安装第三方模块 `requests`
 
@@ -1793,6 +1795,115 @@ file_object.write(res.content)  # 字节类型 res.content = b'\xff\xd8\xff\xe0\
 file_object.close()
 ```
 
+##### 完整代码实现
+
+```python
+import requests  
+  
+def download(file_name, url):  
+    """  
+    实现下载图片、视频  
+    :param file_name: 文件名  
+    :param url: 文件链接  
+    :return:  
+    """    # 下载  
+    res = requests.get(  
+        url = url,  
+        headers = {  
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'  
+        }  
+    )  
+  
+    # 保存  
+    with open(file_name, mode = 'wb') as file_object:  
+        file_object.write(res.content)  
+  
+def get_image():  
+    """ 图片专区 """    print('==========图片专区==========')  
+    image_dict = {  
+        '1': ('王者荣耀图标', 'https://tse3-mm.cn.bing.net/th/id/OIP-C.Me-HzHoLbPeyOneew4qQUAAAAA')  
+    }  
+    msg_list = []  
+    for key,value in image_dict.items():  
+        msg = '{}.{}'.format(key, value[0])  
+        msg_list.append(msg)  
+    msg_string = '; '.join(msg_list)  
+    print(msg_string)  
+  
+    while True:  
+        choice_image = input('请输选择图片的序号 (n/N): ')  
+        if choice_image.upper() == 'N':  
+            return  
+        item_tuple = image_dict.get(choice_image)  
+        if not item_tuple:  
+            print('\n序号选择错误，请重新输入')  
+            continue  
+        title, url = item_tuple  
+        file_name = '{}.png'.format(title)  
+        download(file_name, url)  
+  
+def get_video():  
+    """ 短视频专区 """    print('==========短视频专区==========')  
+    video_dict = {  
+        '1': {  
+            'title': 'OC-Welcome to our world!',  
+            'url': 'https://v.douyin.com/JqQUvLNFx9E/'  
+        },  
+        '2': {  
+            'title': '漫士-理解极限和连续',  
+            'url': 'https://v.douyin.com/ycFvopivbN8/'  
+        },  
+        '3': {  
+            'title': '万物解码ZO-保险的秘密',  
+            'url': 'https://v.douyin.com/EU7aL_soE8M/'  
+        },  
+        '4': {  
+            'title': 'epcdiy-熊猫烧香',  
+            'url': 'https://v.douyin.com/P7UWC4mPU3A/'  
+        }  
+    }  
+    msg_list = []  
+    for key,value in video_dict.items():  
+        msg = '{}.{}'.format(key, value['title'])  
+        msg_list.append(msg)  
+    msg_string = '; '.join(msg_list)  
+    print(msg_string)  
+  
+    while True:  
+        choice_video = input('请输选择短视频的序号 (n/N): ')  
+        if choice_video.upper() == 'N':  
+            return  
+        item_dict = video_dict.get(choice_video)  
+        if not item_dict:  
+            print('\n序号选择错误，请重新输入')  
+            continue  
+        title, url = item_dict.values()  
+        file_name = '{}.mp4'.format(title)  
+        download(file_name, url)      
+  
+def run():  
+    """ 实现程序中的主要逻辑 """  
+    func_dict = {  
+        '1':get_image,  
+        '2':get_video  
+    }  
+  
+    while True:  
+        print('----------专区----------')  
+        print('1.图片专区; 2.短视频专区')  
+        choice = input('请输入专区序号 (q/Q): ')  
+        if choice.upper() == 'Q':  
+            return  
+  
+        func = func_dict.get(choice)  
+        if not func:  
+            print('\n序号选择错误，请重新输入')  
+            continue  
+        # 用户选择正确，执行相应函数  
+        func()  
+  
+run()
+```
 
 ### lambda表达式
 
