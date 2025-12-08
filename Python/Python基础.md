@@ -2304,14 +2304,8 @@ for i in range(2):
 
 
 ```python
-data = hash()
+res = hash('酱油瓶') # res = 856608655605105022
 ```
-
-```txt
-0
-1
-```
-
 
 
 ### 推导式
