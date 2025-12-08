@@ -2133,9 +2133,12 @@ res = oct(8) # res = '0o10'
 3. `hex()` ：十进制 => 十六进制
 
 ```python
-res = bin(16) # res = '0x10'
+res = hex(16) # res = '0x10'
 ```
 
+```python
+
+```
 ### 推导式
 
 
