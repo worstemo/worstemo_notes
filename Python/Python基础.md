@@ -2114,32 +2114,26 @@ res2 = all( [0,1,2] ) # res2 = True
 res3 = all( [0,''] ) # res3 = False
 ```
 
-#### jin'zhi
+#### 进制转换
 
-1. `min()` ：获取最小值
+>**注意：返回值都是字符串类型**
+
+1. `bin()` ：十进制 => 二进制
 
 ```python
-res = min( [1,2,3] ) # res = 1
+res = bin(2) # res = '0b10'
 ```
 
-2. `max()` ：获取最大值
+2. `oct()` ：十进制 => 八进制
 
 ```python
-res = max( [1,2,3] ) # res = 3
+res = oct() # res = '0b10'
 ```
 
-3. `all()` ：是否所有元素转换成布尔值都是 `True`
-
->全为 `True` => `True`
->
->有一个为 `False` => `False`
+3. `hex()` ：十进制 => 十六进制
 
 ```python
-res1 = all( [1,2,3] ) # res1 = True
-
-res2 = all( [0,1,2] ) # res2 = False
-
-res3 = all( [1,2,''] ) # res3 = False
+res = bin(2) # res = '0b10'
 ```
 
 ### 推导式
