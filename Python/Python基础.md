@@ -1766,6 +1766,19 @@ def run():
 run()
 ```
 
+#### 实现下载功能
+
+1. 安装第三方模块 `requests`
+
+```shell
+pip install requests
+```
+
+2. 基于第三方的模块实现下载
+
+```python
+
+```
 
 ### lambda表达式
 
