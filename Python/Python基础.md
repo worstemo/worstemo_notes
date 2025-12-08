@@ -172,6 +172,10 @@ utf-8    # 字节类型 bytes，底层采用 utf-8 编码
 	6. in是否包含
 ```
 
+```python
+data = []
+v1 = data.append(123) # v1 = None，append()函数无返回值，硬要接收只会返回None
+```
 
 ### 元组 tuple
 
@@ -1909,7 +1913,7 @@ run()
 
 ### lambda表达式（匿名函数）
 
->`lambda` 表达式（匿名函数），即一行代码实现定义简单的函数，在特定情况下，使代码更简洁
+>**`lambda` 表达式（匿名函数），即一行代码实现定义简单的函数，在特定情况下，使代码更简洁**
 
 ```python
 def f1():  
@@ -1939,13 +1943,47 @@ res = f3("root") # res = ROOT
 ```
 
 ```python
+def f4(data_list):  
+    return data_list[0]  
+  
+# [lambda 形参 : 函数体]  
+f4 = lambda data_list : data_list[0] # 函数体中写了data_list[0]，内部自动会执行一个return data_list[0]  
+res = f4([1,2,3]) # res = 1
+```
 
+看代码写结果
+
+```python
+def func(data_list):
+	return data_list.append(123)
+
+res = func([1,2,3]) # res = None
 ```
 
 ```python
-
+func = lambda data_list : data_list.append(123)
+res = func([1,2,3]) # res = None
 ```
 
+#### 练习题
+
+```python
+f1 = lambda data : data.replace('中国','安徽')
+
+res = f1('中国人') # res = '安徽人'
+```
+
+```python
+f2 = lambda v1,v2 : v1.insert(v2)
+
+res = f2([11,22],99) # res = '安徽人'
+```
+
+```python
+f1 = lambda data : data.replace('中国','安徽')
+
+res = f1('中国人') # res = '安徽人'
+```
 
 ### 内置函数
 
