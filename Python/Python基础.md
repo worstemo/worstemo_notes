@@ -2061,7 +2061,7 @@ res1,res2 = divmod(5,2) # res1 = 5 // 2 = 2; res2 = 5 % 2 = 1
 res = round(3.1415926, 4) # res = 3.1416
 ```
 
-#### 1. 数值计算相关
+#### 2. 最值、布尔
 
 1. `min()` ：获取最小值
 
@@ -2112,6 +2112,34 @@ res1 = all( [1,2,3] ) # res1 = True
 res2 = all( [0,1,2] ) # res2 = True
 
 res3 = all( [0,''] ) # res3 = False
+```
+
+#### jin'zhi
+
+1. `min()` ：获取最小值
+
+```python
+res = min( [1,2,3] ) # res = 1
+```
+
+2. `max()` ：获取最大值
+
+```python
+res = max( [1,2,3] ) # res = 3
+```
+
+3. `all()` ：是否所有元素转换成布尔值都是 `True`
+
+>全为 `True` => `True`
+>
+>有一个为 `False` => `False`
+
+```python
+res1 = all( [1,2,3] ) # res1 = True
+
+res2 = all( [0,1,2] ) # res2 = False
+
+res3 = all( [1,2,''] ) # res3 = False
 ```
 
 ### 推导式
