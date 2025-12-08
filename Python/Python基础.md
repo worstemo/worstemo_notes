@@ -2414,6 +2414,24 @@ for index, item in enumerate(goods, 1):  # index从1开始自增
 
 10. `sorted()` ：循环的过程中，自动提供自增的一列
 
+>对比 `sort()` 和 `sorted()`：
+>
+>	1. `sort()` 只能对列表使用，且直接操作原列表
+>	
+>	2. `sorted()`可以对很多数据类型（列表、元组、集合）使用，返回一个新数据，不修改原数据
+
+```python
+data_list = [22,3,444,1]   
+data_list.sort() # 直接操作原列表  
+print(data_list) # [1, 3, 22, 444]
+```
+
+```python
+data_list = [22,3,444,1]  
+new_list = sorted(data_list) # 返回一个新列表  
+print(data_list) # [22, 3, 444, 1]
+print(new_list) # [1, 3, 22, 444]
+```
 
 ### 推导式
 
