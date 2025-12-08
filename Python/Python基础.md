@@ -1623,7 +1623,7 @@ else: # data = 函数名
  
 #### 练习题2：资源下载管理器
 
-系统有三大专区：图片专区、短视频专区
+系统有两大专区：图片专区、短视频专区
 
 - 每个专区定义一个函数
 
@@ -1647,13 +1647,34 @@ else: # data = 函数名
 	
 	- 再次提示用户是否继续，用户键入N/n返回上一级（让用户重新选择专区）
 
-- 数据结构
-	- 图片
 ```python
-
+# 图片
+image_dict = {  
+    '1':('王者荣耀图标','https://tse3-mm.cn.bing.net/th/id/OIP-C.Me-HzHoLbPeyOneew4qQUAAAAA')  
+}
 ```
-	- NBA
-	- 短视频
+
+```python
+# 短视频
+video_dict = {  
+    '1':{  
+        'title':'OC-Welcome to our world!',  
+        'url':'https://v.douyin.com/JqQUvLNFx9E/'  
+    },  
+    '2':{  
+        'title':'漫士-理解极限和连续',  
+        'url':'https://v.douyin.com/ycFvopivbN8/'  
+    },  
+    '3':{  
+        'title':'万物解码ZO-保险的秘密',  
+        'url':'https://v.douyin.com/EU7aL_soE8M/'  
+    },  
+    '4':{  
+        'title':'epcdiy-熊猫烧香',  
+        'url':'https://v.douyin.com/P7UWC4mPU3A/'  
+    }  
+}
+```
 
 ### lambda表达式
 
