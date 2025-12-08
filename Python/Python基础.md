@@ -2089,10 +2089,29 @@ res2 = all( [0,1,2] ) # res2 = False
 res3 = all( [1,2,''] ) # res3 = False
 ```
 
-4. `any()` ：获取最大值
+```python
+name = input('请输入用户名：')
+password = input('请输入密码：')
+
+is_valid = all( [name,password] )
+if is_valid:
+	print('用户名和密码都不为空')
+else:
+	print('用户名或密码为空')
+```
+
+4. `any()` ：是否存在元素转换成布尔值为 `True`
+
+>全为 `False` => `False`
+>
+>有一个为 `True` => `True`
 
 ```python
-res = max( [1,2,3] ) # res = 3
+res1 = all( [1,2,3] ) # res1 = True
+
+res2 = all( [0,1,2] ) # res2 = True
+
+res3 = all( [0,''] ) # res3 = False
 ```
 
 ### 推导式
