@@ -1538,7 +1538,7 @@ else:
 	func_object()
 ```
 
-#### 练习题：用户管理系统
+#### 练习题1：用户管理系统
 
 >普通版
 
@@ -1614,9 +1614,15 @@ func_dict = {
 	'3':show_users
 }
 # func_dict[choice]()
-func_dict.get(choice)()
+data = func_dict.get(choice) # data = None / 函数名
+if not data: # data = None
+	print('输入序号不存在')
+else: # data = 函数名
+	data()
 ```
  
+#### 练习题2：用户管理系统
+
 
 ### lambda表达式
 
