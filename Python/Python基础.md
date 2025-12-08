@@ -157,7 +157,7 @@ utf-8    # 字节类型 bytes，底层采用 utf-8 编码
 		pop()
 		关键字：del
 	5. 清除列表元素：clear()
-	6. 对列表元素进行排序：sort()
+	6. 对列表元素进行排序：sort() # 直接操作原列表
 		默认从小到大
 		若 reverse = True，则从大到小
 ```
@@ -2393,9 +2393,26 @@ for item in data_list:
 9. `enumerate()` ：循环的过程中，自动提供自增的一列
 
 ```python
-
+goods = ['飞机', '电脑', '手机']  
+  
+# 以前  
+# for i in range(len(goods)):  
+#     msg = '{} {}'.format(i + 1, goods[i])  
+#     print(msg)  
+  
+# 现在  
+for index, item in enumerate(goods, 1):  # index从1开始自增
+    msg = '{} {}'.format(index, item)  
+    print(msg)
 ```
 
+```txt
+1 飞机
+2 电脑
+3 手机
+```
+
+10. `sorted()` ：循环的过程中，自动提供自增的一列
 
 
 ### 推导式
