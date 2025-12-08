@@ -2279,12 +2279,16 @@ reasson = input('why do you love python?')
 
 ```python
 with open(r'D:\Python_Project\test.txt', mode = 'w', encoding = 'utf-8') as file_object:
-	file_object
+	file_object.write('i love python')
 ```
 
 3. `range()` ：一般配合 `for` 循环使用
 
-4. `hash()` ：计算哈希值
+```python
+reasson = input('why do you love python?')
+```
+
+3. `hash()` ：计算哈希值
 
 >**注意：**
 >
