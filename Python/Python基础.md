@@ -1544,7 +1544,7 @@ else:
 	show_users()
 ```
 
->vip版
+>vip版：函数名作为变量名放入列表中，实现函数的调用
 
 ```python
 def register():
@@ -1569,19 +1569,20 @@ func_list = [register,login,show_users]
 func_list[choice - 1]()
 ```
 
+ 
+
+### lambda表达式
 
 
 
 
 
+### 内置函数
 
 
 
 
-
-
-
-
+### 推导式
 
 
 
