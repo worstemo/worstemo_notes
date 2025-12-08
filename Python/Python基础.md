@@ -1566,7 +1566,7 @@ else:
 	show_users()
 ```
 
->vip版：函数名作为变量名放入列表中，基于索引实现函数的调用
+>**vip版：函数名作为变量名放入列表中，基于索引实现函数的调用**
 
 ```python
 def register():
@@ -1591,7 +1591,7 @@ func_list = [register,login,show_users]
 func_list[choice - 1]()
 ```
 
->vvip版：函数名作为变量名放入字典中，基于索引或 `get()` 方法实现函数的调用
+>**vvip版：函数名作为变量名放入字典中，基于索引或 `get()` 方法实现函数的调用**
 
 ```python
 def register():
@@ -1614,7 +1614,7 @@ func_dict = {
 	'3':show_users
 }
 # func_dict[choice]()
-func_dict.get(choice)
+func_dict.get(choice)()
 ```
  
 
