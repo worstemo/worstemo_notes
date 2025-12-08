@@ -222,9 +222,9 @@ v2 = (1)     # v2 = 1
 >
 >3. **键必须是可哈希类型**
 >
->	可哈希：int、bool、str、tuple
+>	**可哈希：int、bool、str、tuple**
 >	
->	不可哈希：list、dict
+>	**不可哈希：list、dict**
 
 ```python
 定义字典：
@@ -1514,6 +1514,28 @@ data_list[2] # 函数 <function func at 0x000001C3163CA2A0>
 data_list[3] # 123
 
 v1 = data_list[2]() # v1 = 123
+```
+
+```python
+def f1():  
+	return 123  
+
+def f2():  
+	return 234  
+
+func_dict = {
+	'1':f1,
+	'2':f2
+}
+
+# 获取函数并执行
+# func_dict['1']() - f1()
+# func_dict['2']() - f2()
+func_object = func_dict.get('1')
+if func_object == None:
+	print('函数不存在')
+else:
+	func_object()
 ```
 
 #### 练习题：用户管理系统
