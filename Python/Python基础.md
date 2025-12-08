@@ -2205,6 +2205,23 @@ res = ord('武') # 27494
 res = chr(27494) # 武
 ```
 
+##### 练习题：生成4位随机字母验证码
+
+>**注意：`unicode` 兼容 `ASCII` 码**
+
+```python
+import random
+
+char_list = []
+for i in range(4):
+	num = random.randint(65,90)
+	char = chr(num)
+	char_list.append(char)
+
+res = ''.join(char_list)
+print(res)
+```
+
 ### 推导式
 
 
