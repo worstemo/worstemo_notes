@@ -2136,6 +2136,18 @@ res = oct(8) # res = '0o10'
 res = hex(16) # res = '0x10'
 ```
 
+4. `int()` ：其他进制 => 十进制
+
+```python
+res = int('10', base = 2) # res = 2
+res = int('10', base = 8) # res = 8
+res = int('10', base = 16) # res = 16
+```
+
+##### 练习题：IP地址转换
+
+将点分十进制形式的IP地址 `ip = '192.168.11.223'` 转换为易于计算机处理的二进制形式
+
 ```python
 
 ```
