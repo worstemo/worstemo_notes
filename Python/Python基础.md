@@ -2255,7 +2255,7 @@ res = str(27) # res = '27'
 
 9. `bytes()` ：字符串 => 字节类型
 
-#### 6. 数据类型相互转换（9个）
+#### 6. 常用
 
 1. `len()` ：求（字符串、列表、元组、集合、字典）长度
 
@@ -2304,9 +2304,14 @@ for i in range(2):
 
 
 ```python
-res = hash('酱油瓶') # res = 856608655605105022
+res = hash('酱油瓶') 
+print(res) # res = 856608655605105022
 ```
 
+```python
+res = hash([1,2,3])  
+print(res)
+```
 
 ```txt
 Traceback (most recent call last):
