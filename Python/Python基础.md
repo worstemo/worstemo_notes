@@ -2148,9 +2148,31 @@ res = int('10', base = 16) # res = 16
 
 将点分十进制形式的IP地址 `ip = '192.168.11.223'` 转换为易于计算机处理的二进制形式
 
-```python
+>程序流程：
+>
+>	1. 先将每组十进制数转换为二进制
+>	
+>	2. 去除 `0b` ，并补0补足8位
+>	
+>	3. 将每组二进制数拼接起来，得到整体二进制数
+>	
+>	4. 将整体二进制数转换为十进制数
 
+```python
+ip = '192.168.11.223'
+func = lambda ip : int(''.join(bin(int(i))[2:].zfill(8) for i in ip.split('.')),base = 2)  
+print(func(ip))
 ```
+
+
+>`lambda` 表达式
+
+```python
+ip = '192.168.11.223'
+func = lambda ip : int(''.join(bin(int(i))[2:].zfill(8) for i in ip.split('.')),base = 2)  
+print(func(ip))
+```
+
 ### 推导式
 
 
