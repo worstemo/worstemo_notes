@@ -1980,9 +1980,9 @@ res = f2([11,22],99) # res = None
 ```
 
 ```python
-f3 = lambda name : name.split['-']
+f3 = lambda name : name.split['-'][1]
 
-res = f1('中国人') # res = '安徽人'
+res = f3('day01-python基础入门-第一篇-数据类型') # res = 'python基础入门'
 ```
 
 ### 内置函数
