@@ -1921,7 +1921,12 @@ res = f1() # res = 123
 ```
 
 ```python
-
+def f2(a1,a2):  
+    return a1 + a2  
+  
+# [lambda 形参 : 函数体]  
+f2 = lambda a1,a2 : a1 + a2 # 函数体中写了a1 + a2，内部自动会执行一个return a1 + a2  
+res = f2(1,2) # res = 3
 ```
 
 ```python
