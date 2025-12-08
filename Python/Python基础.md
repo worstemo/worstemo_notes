@@ -2278,7 +2278,8 @@ reasson = input('why do you love python?')
 3. `open()` ：打开文件
 
 ```python
-with open(r'D:\Python_Projr')
+with open(r'D:\Python_Project\test.txt', mode = 'w', encoding = 'utf-8') as file_object:
+	file_object
 ```
 
 3. `range()` ：一般配合 `for` 循环使用
