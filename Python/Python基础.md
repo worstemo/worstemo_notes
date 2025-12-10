@@ -2255,7 +2255,7 @@ res = str(27) # res = '27'
 
 9. `bytes()` ：字符串 => 字节类型
 
-#### 6. 常用：I/O、文件 ...（个）
+#### 6. 常用：I/O、文件、排序 ...（10个）
 
 1. `len()` ：求（字符串、列表、元组、集合、字典）长度
 
@@ -2501,7 +2501,7 @@ print(new_list) # 乱序
 
 3. 情境3
 
->使用 `key` 参数自定义排序的规则
+>**使用 `key` 参数自定义排序的规则**
 
 ```python
 video_list = [  
@@ -2550,15 +2550,13 @@ video_list = [
 ]  
   
 # 自定义排序的规则  
-new_list = sorted(video_list, key = lambda file_name : )  
+new_list = sorted(video_list, key = lambda file_name : int(file_name.split(' ')[0]))  
 print(new_list)
 ```
 
 ```txt
 ['1 初识Python.mp4', '2 认识数据结构.mp4', '3 整型.mp4', '4 字符串.mp4', '5 列表.mp4', '6 元组.mp4', '7 字典.mp4', '8 集合.mp4', '9 函数.mp4', '10 模块.mp4', '11 面向对象.mp4', '12 HTML.mp4']
 ```
-
-
 
 
 ### 推导式
